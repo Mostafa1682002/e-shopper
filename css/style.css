@@ -63,6 +63,12 @@ section {
   font-weight: 600;
   text-transform: capitalize;
 }
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+}
+/* //Container  */
 .container {
   margin: 0px auto;
   padding: 10px 15px;
@@ -346,6 +352,7 @@ section {
 }
 .cart-section button {
   width: 100%;
+  margin-bottom: 15px;
 }
 /* <!--=============== LOGIN ===============-->  */
 .login-section .form-login .form-content {
@@ -608,4 +615,68 @@ section {
 }
 .newArrivals .newArrivals-content .box:hover .arrival-btn {
   right: 0;
+}
+/* <!--=============== STEPS ===============--> */
+.steps {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.steps .container {
+  background-color: var(--container-color);
+  border-radius: 15px;
+}
+.steps .container .section-title {
+  padding-top: 50px;
+}
+.steps .container .steps-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 30px;
+  padding-bottom: 30px;
+}
+.steps .container .steps-content .step-item {
+  background-color: var(--body-color);
+  padding: 15px;
+  border-radius: 10px;
+}
+.steps .container .steps-content .step-item .number {
+  padding: 10px 15px;
+  background-color: var(--first-color);
+  font-size: 30px;
+  color: #fff;
+  width: fit-content;
+  margin: 12px 0;
+  border-radius: 3px;
+}
+.steps .container .steps-content .step-item .step-tit {
+  font-weight: 500;
+  color: var(--title-color);
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.steps .container .steps-content .step-item .step-dis {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* <!--=============== NEWSLETTER ===============-->  */
+.newsletter .container {
+}
+.newsletter .container p {
+  max-width: 400px;
+  color: var(--text-color);
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+}
+.newsletter .container .newsletter-form {
+  background-color: var(--container-color);
+  border-radius: 15px;
+  padding: 15px 10px;
+  display: flex;
+  max-width: 450px;
+  margin: 30px auto;
+}
+.newsletter .container .newsletter-form input {
+  width: 100%;
 }
