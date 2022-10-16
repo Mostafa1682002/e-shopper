@@ -451,7 +451,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 15px;
+  padding-right: 18px;
 }
 .home .home-content .part-right .home-buttons .show-details {
   font-size: 18px;
