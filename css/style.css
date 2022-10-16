@@ -53,6 +53,15 @@ body {
 }
 section {
   padding-top: 50px;
+  padding-bottom: 20px;
+}
+.section-title {
+  font-size: 30px;
+  color: var(--title-color);
+  text-align: center;
+  padding-bottom: 70px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 .container {
   margin: 0px auto;
@@ -79,8 +88,8 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  /* height: 65px; */
   z-index: 50;
+  padding: 5px 0;
   background-color: transparent;
 }
 .header.scroll {
@@ -151,11 +160,26 @@ section {
   align-items: center;
   gap: 10px;
 }
-.header .container .header-content .icons span {
+.header .container .header-content .icons > span {
   font-size: 22px;
   cursor: pointer;
   color: var(--title-color);
   transition: var(--main-transtion);
+  position: relative;
+}
+.header .container .header-content .icons > span.cart .co-cart {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  font-size: 12px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
 }
 .header .container .header-content .icons span.bars {
   display: none;
@@ -362,12 +386,6 @@ section {
   color: var(--first-color);
 }
 /* <!--=============== HOME ===============--> */
-.home {
-}
-.home .home-content {
-}
-.home .home-content .home-groups {
-}
 .home .home-content .home-groups .group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -425,7 +443,7 @@ section {
   font-size: 18px;
 }
 .home .home-content .part-right {
-  padding: 30px 0;
+  padding: 30px 25px 30px 0;
 }
 .home .home-content .part-right .home-subtitle {
   font-size: 23px;
@@ -451,13 +469,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 18px;
+  padding-right: 20px;
 }
 .home .home-content .part-right .home-buttons .show-details {
   font-size: 18px;
   color: var(--title-color);
 }
-@media (max-width: 800px) {
+@media (max-width: 990px) {
   .home .home-content .home-groups .group {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -478,8 +496,116 @@ section {
     width: 350px;
     height: 350px;
   }
+  .home .home-content .part-right .home-discription,
+  .home .home-content .part-right .home-buttons .show-details {
+    padding-right: 10px;
+  }
 }
 .swiper-pagination {
   position: initial;
   margin-top: 30px;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+/* <!--=============== DISCOUNT ===============-->  */
+
+.discount .discont-content {
+  background-color: var(--container-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 20px;
+  border-radius: 15px;
+}
+.discount .discont-content .img-dis {
+  width: 250px;
+  height: 250px;
+}
+.discount .discont-content .img-dis img {
+  height: 100%;
+}
+.discount .discont-content .discount-date p {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.discount .discont-content .discount-date h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+  .discount .discont-content {
+    background-color: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 20px;
+    border-radius: 15px;
+  }
+  .discount .discont-content .discount-date p {
+    font-size: 18px;
+  }
+  .discount .discont-content .discount-date h3 {
+    font-size: 25px;
+  }
+}
+/* <!--=============== NEW ARRIVALS ===============-->  */
+
+.newArrivals .newArrivals-content .box {
+  background-color: var(--container-color);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+.newArrivals .newArrivals-content .box .new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.newArrivals .newArrivals-content .box img {
+  width: 250px;
+  height: 250px;
+}
+.newArrivals .newArrivals-content .box .box-title {
+  font-size: 21px;
+  color: var(--title-color);
+  margin: 10px auto 5px;
+  font-weight: 600;
+}
+.newArrivals .newArrivals-content .box .info {
+  font-size: 18px;
+  color: var(--text-color);
+}
+.newArrivals .newArrivals-content .box .box-price {
+  padding: 7px 0;
+}
+.newArrivals .newArrivals-content .box .box-price .dis-price {
+  color: var(--title-color);
+}
+.newArrivals .newArrivals-content .box .box-price .bre-price {
+  color: var(--first-color);
+  padding-left: 3px;
+  text-decoration: line-through;
+}
+
+.newArrivals .newArrivals-content .box .arrival-btn {
+  border-radius: 0;
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  transition: var(--main-transtion);
+  padding: 8px;
+  transition: var(--main-transtion);
+}
+.newArrivals .newArrivals-content .box:hover .arrival-btn {
+  right: 0;
 }
