@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== ICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/colors/color-1.css" />
+    <title>e-commerce website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header-content">
+          <h4 class="logo">
+            <a href="index.html"
+              ><i class="fas fa-shopping-bag"></i> e-shopper</a
+            >
+          </h4>
+          <ul class="nav">
+            <span class="fas fa-times close-menu"></span>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">ٍShop</a></li>
+            <li><a href="cart.html">ٍCart</a></li>
+            <li><a href="blog.html">ٍBlog</a></li>
+            <li><a href="faq.html">ٍFaq`s</a></li>
+            <li><a href="contact.html">ٍContact</a></li>
+          </ul>
+          <div class="icons">
+            <span class="fas fa-user-alt login"></span>
+            <span class="fas fa-shopping-cart cart"></span>
+            <span class="fas fa-bars bars"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--=============== CART ===============-->
+    <div class="cart-section" id="cart-section">
+      <span class="fas fa-times close-cart"></span>
+      <h3 class="title">My Cart</h3>
+      <div class="cart-content">
+        <div class="cart-item">
+          <div class="item-img">
+            <img src="img/cart-1.png" alt="" />
+          </div>
+          <div class="item-info">
+            <h4 class="title-item">Windbreaker</h4>
+            <p class="item-price">30$</p>
+            <div class="amount">
+              <div class="price-amount">
+                <span class="decre">-</span>
+                <span class="count">1</span>
+                <span class="incre">+</span>
+              </div>
+              <span class="fas fa-trash delete"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="item-img">
+            <img src="img/cart-2.png" alt="" />
+          </div>
+          <div class="item-info">
+            <h4 class="title-item">Cardigan Hoodie</h4>
+            <p class="item-price">70$</p>
+            <div class="amount">
+              <div class="price-amount">
+                <span class="decre">-</span>
+                <span class="count">2</span>
+                <span class="incre">+</span>
+              </div>
+              <span class="fas fa-trash delete"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="item-img">
+            <img src="img/cart-3.png" alt="" />
+          </div>
+          <div class="item-info">
+            <h4 class="title-item">Cartoon</h4>
+            <p class="item-price">50$</p>
+            <div class="amount">
+              <div class="price-amount">
+                <span class="decre">-</span>
+                <span class="count">3</span>
+                <span class="incre">+</span>
+              </div>
+              <span class="fas fa-trash delete"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="total-content">
+        <h3 class="count-item">Items : <span class="length">30</span></h3>
+        <h3 class="total">Total : <span class="total-price">500$</span></h3>
+      </div>
+      <button>buy now</button>
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login-section" id="login-section">
+      <span class="fas fa-times close-login"></span>
+      <h3 class="title">Login</h3>
+      <form action="" class="form-login">
+        <div class="form-content">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-content">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="pass"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button>Login Now</button>
+        <p class="signup">
+          Not a member ? <a href="registration.html">sign up now</a>
+        </p>
+      </form>
+    </div>
+
+    <!--=============== HOME ===============-->
+    <section class="home">
+      <!-- <div class="swipper"> -->
+      <div class="container">
+        <div class="home-content swiper">
+          <div class="home-groups swiper-wrapper">
+            <div class="group swiper-slide">
+              <div class="part-left">
+                <div class="img-home">
+                  <img src="img/slide-2.png" alt="" />
+                </div>
+                <div class="details-img">
+                  <h4 class="details-title">The "Cardigan"</h4>
+                  <p class="details-subtitle">Woolen</p>
+                </div>
+              </div>
+              <div class="part-right">
+                <h3 class="home-subtitle">#1 trending item</h3>
+                <h1 class="home-title">
+                  original <br />
+                  is never <br />finished!!
+                </h1>
+                <p class="home-discription">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio sapiente sequi eligendi esse dignissimos officia
+                  eaque aspernatur, voluptates repudiandae atque saepe eius
+                  harum! Laudantium ratione incidunt eligendi, molestias
+                  adipisci nesciunt!
+                </p>
+                <div class="home-buttons">
+                  <a href="details.html" class="btn">Buy Now</a>
+                  <a href="details.html" class="show-details"
+                    >view details <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="group swiper-slide">
+              <div class="part-left">
+                <div class="img-home">
+                  <img src="img/slide-1.png" alt="" />
+                </div>
+                <div class="details-img">
+                  <h4 class="details-title">The "Cardigan"</h4>
+                  <p class="details-subtitle">Woolen</p>
+                </div>
+              </div>
+              <div class="part-right">
+                <h3 class="home-subtitle">#2 trending item</h3>
+                <h1 class="home-title">
+                  original <br />
+                  is never <br />finished!!
+                </h1>
+                <p class="home-discription">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio sapiente sequi eligendi esse dignissimos officia
+                  eaque aspernatur, voluptates repudiandae atque saepe eius
+                  harum! Laudantium ratione incidunt eligendi, molestias
+                  adipisci nesciunt!
+                </p>
+                <div class="home-buttons">
+                  <a href="details.html" class="btn">Buy Now</a>
+                  <a href="details.html" class="show-details"
+                    >view details <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="group swiper-slide">
+              <div class="part-left">
+                <div class="img-home">
+                  <img src="img/slide-3.png" alt="" />
+                </div>
+                <div class="details-img">
+                  <h4 class="details-title">The "Cardigan"</h4>
+                  <p class="details-subtitle">Woolen</p>
+                </div>
+              </div>
+              <div class="part-right">
+                <h3 class="home-subtitle">#3 trending item</h3>
+                <h1 class="home-title">
+                  original <br />
+                  is never <br />finished!!
+                </h1>
+                <p class="home-discription">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio sapiente sequi eligendi esse dignissimos officia
+                  eaque aspernatur, voluptates repudiandae atque saepe eius
+                  harum! Laudantium ratione incidunt eligendi, molestias
+                  adipisci nesciunt!
+                </p>
+                <div class="home-buttons">
+                  <a href="details.html" class="btn">Buy Now</a>
+                  <a href="details.html" class="show-details"
+                    >view details <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== DISCOUNT ===============-->
+      <!-- <section class="discount section"></section> -->
+
+      <!--=============== NEW ARRIVALS ===============-->
+      <!-- <section class="new section"></section> -->
+
+      <!--=============== STEPS ===============-->
+      <!-- <section class="steps section container"></section> -->
+
+      <!--=============== NEWSLETTER ===============-->
+      <!-- <section class="newsletter section"></section> -->
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section"></footer>
+
+    <!--=============== SCROLL UP ===============-->
+
+    <!--=============== STYLE SWITCHER ===============-->
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--=============== JS ===============-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
