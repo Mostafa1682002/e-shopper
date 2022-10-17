@@ -4,19 +4,13 @@ let menu=document.querySelector('.nav');
 let closeMenu=document.querySelector('.nav .close-menu')
 barsIcon.onclick=(e)=>{
     menu.classList.add('active')
+    //Close Swither
+    swither.classList.remove('active')
 }
 // CLose Cart 
 closeMenu.onclick=()=>{
     menu.classList.remove('active')
 }
-
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-
-
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-
 
 /*=============== SHOW CART ===============*/
 let cartIcon=document.querySelector('.icons .cart');
@@ -24,8 +18,8 @@ let cartSection=document.querySelector('.cart-section');
 let closeCartsection=document.querySelector('.close-cart')
 cartIcon.onclick=()=>{
     cartSection.classList.add('active')
-    //Close Menu
-    menu.classList.remove('active')
+    //Close Swither
+    swither.classList.remove('active')
 }
 
 //Close Cart
@@ -46,10 +40,8 @@ let loginSection=document.querySelector('.login-section');
 let closeLoginsection=document.querySelector('.close-login')
 loginIcon.onclick=()=>{
     loginSection.classList.add('active')
-    //Close Menu
-    menu.classList.remove('active')
-    //Close Cart
-    cartSection.classList.remove('active')
+    //Close Swither
+    swither.classList.remove('active')
 }
 
 //Close Cart
@@ -57,12 +49,7 @@ closeLoginsection.onclick=()=>{
     loginSection.classList.remove('active')
 }
 
-/*===== LOGIN SHOW =====*/
-/* Validate if constant exists */
 
-
-/*===== LOGIN HIDDEN =====*/
-/* Validate if constant exists */
 
 
 /*=============== HOME SWIPER ===============*/
@@ -107,12 +94,62 @@ var swiper = new Swiper(".new-Swip ", {
   });
 
 /*=============== SHOW SCROLL UP ===============*/ 
-
+let scrollUp=document.querySelector('.scroll-up');
+addEventListener('scroll',()=>{
+    if(this.scrollY>200){
+        scrollUp.classList.add('active');
+    }else{
+        scrollUp.classList.remove('active');
+    }
+})
+scrollUp.addEventListener('click',()=>{
+    scrollTo(0,0)
+})
 
 /*=============== LIGHT BOX ===============*/
-
-
 /*=============== QUESTIONS ACCORDION ===============*/
 
 
 /*=============== STYLE SWITCHER ===============*/
+let colorStyle=document.querySelector('.color-style')
+let swither=document.querySelector('.swither');
+let gear=document.querySelector('.gear');
+let allColor=document.querySelectorAll('.color'); 
+
+gear.addEventListener('click',()=>{
+    swither.classList.toggle('active')
+})
+addEventListener('scroll',()=>{
+    swither.classList.remove('active')
+})
+
+allColor.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        allColor.forEach(e=>{
+            e.classList.remove('active','fa-check')
+        })
+        e.classList.add('active','fa-check');
+        localStorage.setItem('color',e.getAttribute('data-color'));
+        setColor(e);
+    })
+})
+
+function setColor(e){
+    let path=colorStyle.getAttribute('href').split('/');
+    path=path.slice(0,path.length-1);
+    colorStyle.setAttribute('href',`${path.join('/')}/${e.getAttribute('data-color')}.css`)
+}
+addEventListener('load',()=>{
+    if(localStorage.getItem('color')){
+        allColor.forEach((e,i)=>{
+            if(localStorage.getItem('color')==e.getAttribute('data-color')){
+                allColor.forEach((e)=>e.classList.remove('active','fa-check'));
+                e.classList.add('active','fa-check');
+                setColor(e);
+            }
+        })
+    }else{
+        allColor[0].classList.add('active');
+        setColor(allColor[0]);
+    }
+})
