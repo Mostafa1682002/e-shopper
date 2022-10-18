@@ -336,18 +336,22 @@ section {
   color: var(--first-color);
   padding: 5px 0 7px;
 }
-.cart-section .cart-item .item-info .amount {
+.amount {
   display: flex;
   column-gap: 40px;
   align-items: center;
 }
-.cart-section .cart-item .item-info .amount .price-amount {
+.amount .price-amount {
   display: flex;
   gap: 8px;
 }
 
-.item-info .amount .price-amount span:not(:nth-child(2)) {
-  width: 20px;
+.amount .price-amount span.count {
+  padding: 0 5px;
+}
+.amount .price-amount span.decre,
+.amount .price-amount span.incre {
+  width: 25px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -355,7 +359,8 @@ section {
   border-radius: 10px;
   cursor: pointer;
 }
-.cart-section .cart-item .item-info .amount .delete {
+.amount .delete,
+.amount .fav {
   color: var(--first-color);
   cursor: pointer;
   font-size: 18px;
@@ -709,7 +714,7 @@ section {
 }
 /* <!--=============== FOOTER ===============--> */
 .footer {
-  padding: 10px 0;
+  padding: 30px 0 10px;
 }
 .footer .container .footer-content {
   display: grid;
@@ -775,6 +780,7 @@ section {
   bottom: 10px;
   right: -100%;
   padding: 7px 10px;
+  z-index: 50;
 }
 .scroll-up.active {
   right: 10px;
@@ -913,10 +919,152 @@ section {
   .shop .container .shop-content {
     flex-direction: column;
   }
-  .shop .container .shop-content .left-boxs {
-    width: 100%;
-  }
+  .shop .container .shop-content .left-boxs,
   .shop .container .shop-content .right-boxs {
     width: 100%;
+  }
+  .shop .container .shop-content .right-boxs .pagin {
+    justify-content: center;
+  }
+}
+/* <!--=============== DETAILS ===============-->  */
+.datails-section .container .details-content {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0 0;
+  gap: 15px;
+}
+.datails-section .container .details-content .imgs {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.datails-section .container .details-content .imgs > img {
+  width: 48%;
+  height: 250px;
+  cursor: pointer;
+  background-color: var(--container-color);
+  border-radius: 10px;
+}
+.imgs .curent-imgs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  transition: var(--main-transtion);
+}
+.imgs .curent-imgs.active {
+  z-index: 120;
+  opacity: 1;
+}
+.imgs .curent-imgs .img-src {
+  position: relative;
+}
+.imgs .curent-imgs .img-src .close-img {
+  position: absolute;
+  top: -35px;
+  right: 0;
+}
+.imgs .curent-imgs .img-src img {
+  width: 350px;
+  background-color: #fff;
+}
+.imgs .curent-imgs .img-src .fo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.imgs .curent-imgs .img-src .fo h5 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.imgs .curent-imgs .img-src .fo p {
+  font-size: 16px;
+}
+.imgs .curent-imgs span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.datails-section .container .details-content .datails-info {
+  padding: 10px 0;
+  width: 50%;
+}
+.details-content .datails-info .subtit {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.details-content .datails-info .title {
+  font-weight: 600;
+  font-size: 27px;
+  color: var(--title-color);
+}
+.details-content .datails-info .starts-content {
+  display: flex;
+  column-gap: 22px;
+  padding: 15px 0;
+  font-size: 16px;
+}
+.details-content .datails-info .starts-content .start {
+  color: #f90;
+}
+.details-content .datails-info .starts-content .review {
+  color: var(--text-color);
+}
+.details-content .datails-info .price-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.details-content .datails-info .price-details .price {
+  color: var(--text-color);
+  font-size: 20px;
+}
+.details-content .datails-info .price-details .price-pr {
+  text-decoration: line-through;
+  color: var(--first-color);
+}
+.details-content .datails-info .price-details .off {
+  background-color: var(--title-color);
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.details-content .datails-info .amount {
+  padding: 10px 0;
+}
+.details-content .datails-info .txt-tit {
+  font-size: 20px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+.details-content .datails-info .text {
+  padding: 15px 20px 15px 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+@media (max-width: 991px) {
+  .datails-section .container .details-content {
+    flex-direction: column;
+  }
+  .datails-section .container .details-content .datails-info,
+  .datails-section .container .details-content .imgs {
+    width: 100%;
+  }
+  .imgs .curent-imgs .img-src img {
+    width: 250px;
   }
 }

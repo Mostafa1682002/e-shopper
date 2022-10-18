@@ -18,20 +18,12 @@ let cartSection=document.querySelector('.cart-section');
 let closeCartsection=document.querySelector('.close-cart')
 cartIcon.onclick=()=>{
     cartSection.classList.add('active')
-    //Close Swither
-    swither.classList.remove('active')
 }
 
 //Close Cart
 closeCartsection.onclick=()=>{
     cartSection.classList.remove('active')
 }
-/*===== CART SHOW =====*/
-/* Validate if constant exists */
-
-
-/*===== CART HIDDEN =====*/
-/* Validate if constant exists */
 
 
 /*=============== SHOW LOGIN ===============*/
@@ -40,17 +32,12 @@ let loginSection=document.querySelector('.login-section');
 let closeLoginsection=document.querySelector('.close-login')
 loginIcon.onclick=()=>{
     loginSection.classList.add('active')
-    //Close Swither
-    swither.classList.remove('active')
 }
 
 //Close Cart
 closeLoginsection.onclick=()=>{
     loginSection.classList.remove('active')
 }
-
-
-
 
 /*=============== HOME SWIPER ===============*/
 let homeSwiper=new Swiper(".home-content ",{
@@ -92,6 +79,51 @@ var swiper = new Swiper(".new-Swip ", {
         },
     },
   });
+
+/*===== CART Product Details =====*/
+let allProducts=document.querySelectorAll('.box');
+let allImgs=document.querySelectorAll('.imgs >img');
+let curentImgs=document.querySelector('.curent-imgs')
+let imgSrc=document.querySelector('.img-src img');
+let closeCurentImg=document.querySelector('.close-img')
+let len=document.querySelector('.len');
+let numberImgs=allImgs.length;
+let count=0;
+
+//IF Click On Any Box
+allProducts.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        window.location.href='details.html'
+    })
+})
+
+//IF Click Any Img
+allImgs.forEach((e,ind)=>{
+    e.addEventListener('click',()=>{
+        curentImgs.classList.add('active')
+        count=ind+1;
+        imgSrc.src=allImgs[ind].src;
+        len.textContent=`${count} of ${numberImgs}`;
+    })
+})
+
+//close curent-imgs 
+if(document.body.classList.contains('.details')){
+    closeCurentImg.onclick=()=>{
+        curentImgs.classList.remove('active')
+    }
+}
+function next(){
+    count=(count+1)%numberImgs;
+    imgSrc.src=allImgs[count].src;
+    len.textContent=`${count+1} of ${numberImgs}`;
+}
+function prev(){
+    count=(count -1 +numberImgs)%numberImgs;
+    imgSrc.src=allImgs[count].src;
+    len.textContent=`${count+1} of ${numberImgs}`;
+}
+
 
 /*=============== SHOW SCROLL UP ===============*/ 
 let scrollUp=document.querySelector('.scroll-up');
