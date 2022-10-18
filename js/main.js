@@ -85,7 +85,6 @@ let allProducts=document.querySelectorAll('.box');
 let allImgs=document.querySelectorAll('.imgs >img');
 let curentImgs=document.querySelector('.curent-imgs')
 let imgSrc=document.querySelector('.img-src img');
-let closeCurentImg=document.querySelector('.close-img')
 let len=document.querySelector('.len');
 let numberImgs=allImgs.length;
 let count=0;
@@ -108,11 +107,10 @@ allImgs.forEach((e,ind)=>{
 })
 
 //close curent-imgs 
-if(document.body.classList.contains('.details')){
-    closeCurentImg.onclick=()=>{
-        curentImgs.classList.remove('active')
-    }
+function closeImg(){
+    curentImgs.classList.remove('active')
 }
+
 function next(){
     count=(count+1)%numberImgs;
     imgSrc.src=allImgs[count].src;
