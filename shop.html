@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== ICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" class="color-style" href="css/colors/color-1.css" />
+    <title>e-commerce website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header-content">
+          <h4 class="logo">
+            <a href="index.html"
+              ><i class="fas fa-shopping-bag"></i> e-shopper</a
+            >
+          </h4>
+          <ul class="nav">
+            <span class="fas fa-times close-menu"></span>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="shop.html">ٍShop</a></li>
+            <li><a href="cart.html">ٍCart</a></li>
+            <li><a href="blog.html">ٍBlog</a></li>
+            <li><a href="faq.html">ٍFaq`s</a></li>
+            <li><a href="contact.html">ٍContact</a></li>
+          </ul>
+          <div class="icons">
+            <span class="fas fa-user-alt login"></span>
+            <span class="fas fa-shopping-cart cart">
+              <span class="co-cart">3</span>
+            </span>
+            <span class="fas fa-bars bars"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--=============== CART ===============-->
+    <div class="cart-section" id="cart-section">
+      <span class="fas fa-times close-cart"></span>
+      <h3 class="title">My Cart</h3>
+      <div class="cart-content">
+        <div class="cart-item">
+          <div class="item-img">
+            <img src="img/cart-1.png" alt="" />
+          </div>
+          <div class="item-info">
+            <h4 class="title-item">Windbreaker</h4>
+            <p class="item-price">30$</p>
+            <div class="amount">
+              <div class="price-amount">
+                <span class="decre">-</span>
+                <span class="count">1</span>
+                <span class="incre">+</span>
+              </div>
+              <span class="fas fa-trash delete"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="item-img">
+            <img src="img/cart-2.png" alt="" />
+          </div>
+          <div class="item-info">
+            <h4 class="title-item">Cardigan Hoodie</h4>
+            <p class="item-price">70$</p>
+            <div class="amount">
+              <div class="price-amount">
+                <span class="decre">-</span>
+                <span class="count">2</span>
+                <span class="incre">+</span>
+              </div>
+              <span class="fas fa-trash delete"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="item-img">
+            <img src="img/cart-3.png" alt="" />
+          </div>
+          <div class="item-info">
+            <h4 class="title-item">Cartoon</h4>
+            <p class="item-price">50$</p>
+            <div class="amount">
+              <div class="price-amount">
+                <span class="decre">-</span>
+                <span class="count">3</span>
+                <span class="incre">+</span>
+              </div>
+              <span class="fas fa-trash delete"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="total-content">
+        <h3 class="count-item">Items : <span class="length">30</span></h3>
+        <h3 class="total">Total : <span class="total-price">500$</span></h3>
+      </div>
+      <button>buy now</button>
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login-section" id="login-section">
+      <span class="fas fa-times close-login"></span>
+      <h3 class="title">Login</h3>
+      <form action="" class="form-login">
+        <div class="form-content">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-content">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="pass"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button>Login Now</button>
+        <p class="signup">
+          Not a member ? <a href="registration.html">sign up now</a>
+        </p>
+      </form>
+    </div>
+    <!--=============== SHOP ===============-->
+    <section class="shop">
+      <div class="container">
+        <div class="page-content">
+          <h2 class="page-title">Shop Page</h2>
+          <p class="links">
+            <a href="index.html" class="home">Home</a>
+            <span>></span>
+            <a href="#" class="curent">Shop</a>
+          </p>
+        </div>
+        <div class="shop-content">
+          <div class="left-boxs">
+            <h3 class="head-left-box">Select filter</h3>
+            <div class="filter-content">
+              <h4 class="head-filter">Condition</h4>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="new" checked />
+                  <label for="new">New</label>
+                </div>
+                <p>(20)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="sale" checked />
+                  <label for="sale">Sale</label>
+                </div>
+                <p>(15)</p>
+              </div>
+            </div>
+            <div class="filter-content">
+              <h4 class="head-filter">Size</h4>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="S" />
+                  <label for="S">S</label>
+                </div>
+                <p>(12)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="M" />
+                  <label for="M">M</label>
+                </div>
+                <p>(8)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="L" />
+                  <label for="L">L</label>
+                </div>
+                <p>(6)</p>
+              </div>
+            </div>
+            <div class="filter-content">
+              <h4 class="head-filter">Composition</h4>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Men" />
+                  <label for="Men">Men</label>
+                </div>
+                <p>(13)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Women" />
+                  <label for="Women">Women</label>
+                </div>
+                <p>(14)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Kids" />
+                  <label for="Kids">Kids</label>
+                </div>
+                <p>(5)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Others" />
+                  <label for="Others">Others</label>
+                </div>
+                <p>(6)</p>
+              </div>
+            </div>
+            <div class="filter-content">
+              <h4 class="head-filter">Styles</h4>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Casual" />
+                  <label for="Casual">Casual</label>
+                </div>
+                <p>(6)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Dressy" />
+                  <label for="Dressy">Dressy</label>
+                </div>
+                <p>(4)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Girly" />
+                  <label for="Girly">Girly</label>
+                </div>
+                <p>(5)</p>
+              </div>
+            </div>
+            <div class="filter-content">
+              <h4 class="head-filter">Properties</h4>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Jackets" />
+                  <label for="Jackets">Jackets</label>
+                </div>
+                <p>(3)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="T-Shirts" />
+                  <label for="T-Shirts">T-Shirts</label>
+                </div>
+                <p>(2)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Accessories" />
+                  <label for="Accessories">Accessories</label>
+                </div>
+                <p>(3)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Shoes" />
+                  <label for="Shoes">Shoes</label>
+                </div>
+                <p>(2)</p>
+              </div>
+              <div class="fil-item">
+                <div class="filter">
+                  <input type="checkbox" id="Coats" />
+                  <label for="Coats">Coats</label>
+                </div>
+                <p>(3)</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-boxs">
+            <div class="box">
+              <span class="new btn">New</span>
+              <img src="img/product-1.png" alt="" />
+              <h3 class="box-title">Windbreaker Jacket</h3>
+              <p class="info">Accessory</p>
+              <div class="box-price">
+                <span class="disc-price">25.15$</span>
+                <span class="bre-price">30.15$</span>
+              </div>
+              <button class="arrival-btn">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+            <div class="box">
+              <span class="new btn">New</span>
+              <img src="img/product-2.png" alt="" />
+              <h3 class="box-title">Windbreaker Jacket</h3>
+              <p class="info">Accessory</p>
+              <div class="box-price">
+                <span class="disc-price">25.15$</span>
+                <span class="bre-price">30.15$</span>
+              </div>
+              <button class="arrival-btn">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+            <div class="box">
+              <span class="new btn">New</span>
+              <img src="img/product-3.png" alt="" />
+              <h3 class="box-title">Windbreaker Jacket</h3>
+              <p class="info">Accessory</p>
+              <div class="box-price">
+                <span class="disc-price">25.15$</span>
+                <span class="bre-price">30.15$</span>
+              </div>
+              <button class="arrival-btn">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+            <div class="box">
+              <span class="new btn">New</span>
+              <img src="img/product-4.png" alt="" />
+              <h3 class="box-title">Windbreaker Jacket</h3>
+              <p class="info">Accessory</p>
+              <div class="box-price">
+                <span class="disc-price">25.15$</span>
+                <span class="bre-price">30.15$</span>
+              </div>
+              <button class="arrival-btn">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+            <div class="box">
+              <span class="new btn">New</span>
+              <img src="img/product-5.png" alt="" />
+              <h3 class="box-title">Windbreaker Jacket</h3>
+              <p class="info">Accessory</p>
+              <div class="box-price">
+                <span class="disc-price">25.15$</span>
+                <span class="bre-price">30.15$</span>
+              </div>
+              <button class="arrival-btn">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+            <div class="box">
+              <span class="new btn">New</span>
+              <img src="img/product-6.png" alt="" />
+              <h3 class="box-title">Windbreaker Jacket</h3>
+              <p class="info">Accessory</p>
+              <div class="box-price">
+                <span class="disc-price">25.15$</span>
+                <span class="bre-price">30.15$</span>
+              </div>
+              <button class="arrival-btn">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="foot">
+            <h3>
+              <a href="index.html"
+                ><i class="fas fa-shopping-bag"></i> e-shopper</a
+              >
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+              ducimus sint quibusdam consectetur adipisicing elit.
+            </p>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="foot">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About US</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Support Center</a></li>
+            </ul>
+          </div>
+          <div class="foot">
+            <h3>Our Sevices</h3>
+            <ul>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Discount</a></li>
+              <li><a href="#">Shopping Mode</a></li>
+            </ul>
+          </div>
+          <div class="foot">
+            <h3>Our Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-copy">
+          &copy; <span>Mostafa Hossam</span>. All Rights Reserved
+          <span>2022</span>
+        </div>
+      </div>
+    </footer>
+    <!--=============== SCROLL UP ===============-->
+    <button class="scroll-up"><i class="fas fa-arrow-up"></i></button>
+    <!--=============== STYLE SWITCHER ===============-->
+    <div class="swither">
+      <span class="fas fa-gear gear"></span>
+      <div class="all-color">
+        <span class="fas color fa-check" data-color="color-1"></span>
+        <span class="fas color" data-color="color-2"></span>
+        <span class="fas color" data-color="color-3"></span>
+        <span class="fas color" data-color="color-4"></span>
+        <span class="fas color" data-color="color-5"></span>
+      </div>
+    </div>
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--=============== JS ===============-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
