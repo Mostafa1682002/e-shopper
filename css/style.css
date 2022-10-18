@@ -942,7 +942,7 @@ section {
 }
 .datails-section .container .details-content .imgs > img {
   width: 48%;
-  height: 250px;
+  /* height: 250px; */
   cursor: pointer;
   background-color: var(--container-color);
   border-radius: 10px;
