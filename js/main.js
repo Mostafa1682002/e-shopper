@@ -169,7 +169,7 @@ function setColor(e){
     path=path.slice(0,path.length-1);
     colorStyle.setAttribute('href',`${path.join('/')}/${e.getAttribute('data-color')}.css`)
 }
-addEventListener('load',()=>{
+// addEventListener('load',()=>{
     if(localStorage.getItem('color')){
         allColor.forEach((e,i)=>{
             if(localStorage.getItem('color')==e.getAttribute('data-color')){
@@ -182,4 +182,4 @@ addEventListener('load',()=>{
         allColor[0].classList.add('active');
         setColor(allColor[0]);
     }
-})
+// })
