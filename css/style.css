@@ -893,13 +893,13 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 15px;
 }
-.shop .container .shop-content .right-boxs .pagin {
+.pagin {
   display: flex;
   justify-content: end;
   gap: 5px;
   padding: 20px 5px;
 }
-.shop .container .shop-content .right-boxs .pagin li {
+.pagin li {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -911,9 +911,13 @@ section {
   cursor: pointer;
   transition: var(--main-transtion);
 }
-.shop .container .shop-content .right-boxs .pagin li.active,
-.shop .container .shop-content .right-boxs .pagin li:hover {
+.pagin li.active,
+.pagin li:hover {
   opacity: 1;
+}
+.pagin li.ic {
+  color: var(--first-color);
+  background-color: var(--container-color);
 }
 @media (max-width: 991px) {
   .shop .container .shop-content {
@@ -923,7 +927,7 @@ section {
   .shop .container .shop-content .right-boxs {
     width: 100%;
   }
-  .shop .container .shop-content .right-boxs .pagin {
+  .pagin {
     justify-content: center;
   }
 }
@@ -950,17 +954,18 @@ section {
   position: fixed;
   inset: 0;
   z-index: -1;
-  opacity: 0;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
+  z-index: 120;
+  transform: scale(0);
+  transform-origin: center;
   transition: var(--main-transtion);
 }
 .imgs .curent-imgs.active {
-  z-index: 120;
-  opacity: 1;
+  transform: scale(1);
 }
 .imgs .curent-imgs .img-src {
   position: relative;
@@ -1065,5 +1070,121 @@ section {
   }
   .imgs .curent-imgs .img-src img {
     width: 250px;
+  }
+}
+/* <!--=============== FAQ'S ===============--> */
+.questions .faq-content {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 25px;
+}
+.questions .faq-content .faq-item {
+  background-color: var(--container-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  height: 50px;
+  transition: 1.5s;
+}
+.questions .faq-content .faq-item span {
+  padding-right: 12px;
+  padding-top: 6px;
+  font-size: 18px;
+}
+.questions .faq-content .faq-item .text-item {
+  height: 30px;
+  overflow: hidden;
+  transition: 1.5s;
+}
+.questions .faq-content .faq-item.active {
+  background-color: var(--first-color);
+  height: 180px;
+}
+.questions .faq-content .active .text-item {
+  height: 160px;
+}
+.questions .faq-content .faq-item h3 {
+  font-weight: 500;
+  color: var(--title-color);
+  font-size: 18px;
+}
+.questions .faq-content .faq-item p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.questions .faq-content .faq-item.active .text-item h3,
+.questions .faq-content .faq-item.active .text-item p,
+.questions .faq-content .faq-item.active span {
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .questions .faq-content {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+/* <!--=============== BLOG ===============--> */
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-content .blog-card {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  background-color: var(--container-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+.blog-content .blog-card .img-card {
+  width: 40%;
+}
+.blog-content .blog-card .img-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.blog-content .blog-card .body-card {
+  width: 55%;
+}
+.blog-content .blog-card .body-card p {
+  color: var(--text-color);
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.blog-content .blog-card .body-card h3 {
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.blog-content .blog-card .body-card span {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+  transition: var(--main-transtion);
+}
+.blog-content .blog-card .body-card span i {
+  animation: leftToright 1s linear infinite;
+}
+.blog-content .blog-card .body-card span:hover {
+  color: var(--first-color);
+}
+@keyframes leftToright {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@media (max-width: 991px) {
+  .blog-content .blog-card {
+    flex-direction: column;
+  }
+  .blog-content .blog-card .img-card,
+  .blog-content .blog-card .body-card {
+    width: 100%;
   }
 }

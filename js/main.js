@@ -138,7 +138,22 @@ scrollUp.addEventListener('click',()=>{
 
 /*=============== LIGHT BOX ===============*/
 /*=============== QUESTIONS ACCORDION ===============*/
-
+let allQuestions=document.querySelectorAll(".faq-content .faq-item");
+allQuestions.forEach((item)=>{
+    item.addEventListener('click',()=>{
+        if(item.classList.contains('active')){
+            item.classList.remove('active');
+            item.querySelector('span').classList.remove('fa-times')
+        }else{
+            allQuestions.forEach((e)=>{
+                e.classList.remove('active');
+                e.querySelector('span').classList.remove('fa-times')
+            })
+            item.classList.add('active');
+            item.querySelector('span').classList.add('fa-times')
+        }
+    })
+})
 
 /*=============== STYLE SWITCHER ===============*/
 let colorStyle=document.querySelector('.color-style')
@@ -169,17 +184,20 @@ function setColor(e){
     path=path.slice(0,path.length-1);
     colorStyle.setAttribute('href',`${path.join('/')}/${e.getAttribute('data-color')}.css`)
 }
-// addEventListener('load',()=>{
-    if(localStorage.getItem('color')){
-        allColor.forEach((e,i)=>{
-            if(localStorage.getItem('color')==e.getAttribute('data-color')){
-                allColor.forEach((e)=>e.classList.remove('active','fa-check'));
-                e.classList.add('active','fa-check');
-                setColor(e);
-            }
-        })
-    }else{
-        allColor[0].classList.add('active');
-        setColor(allColor[0]);
-    }
-// })
+
+if(localStorage.getItem('color')){
+    allColor.forEach((e,i)=>{
+        if(localStorage.getItem('color')==e.getAttribute('data-color')){
+            allColor.forEach((e)=>e.classList.remove('active','fa-check'));
+            e.classList.add('active','fa-check');
+            setColor(e);
+        }
+    })
+}else{
+    allColor[0].classList.add('active');
+    setColor(allColor[0]);
+}
+
+/*=============== ADD Yaer To Footer===============*/
+let year=document.querySelector('.year');
+year.textContent=new Date().getFullYear();
