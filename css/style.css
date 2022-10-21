@@ -1276,7 +1276,7 @@ section {
   }
   .contact .contact-content .my-contact,
   .registration-content,
-  .form-contact {
+  .contact .contact-content .form-contact {
     width: 100%;
   }
   .form-registration .flex-input,
