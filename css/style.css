@@ -1200,7 +1200,7 @@ section {
     width: 100%;
   }
 }
-/* <!--=============== CONTACT US  ===============--> */
+/* <!--=============== CONTACT US AND REGISTRATION  ===============--> */
 .contact .contact-content {
   display: flex;
   flex-direction: row;
@@ -1210,6 +1210,11 @@ section {
 .contact .contact-content .my-contact,
 .contact .contact-content .form-contact {
   width: 48%;
+}
+.registration-content {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
 }
 .contact .contact-content .my-contact {
   padding-left: 100px;
@@ -1235,38 +1240,47 @@ section {
 .contact .contact-content .my-contact .box-contact a:hover {
   color: var(--first-color);
 }
-.contact .contact-content .form-contact .flex-input {
+.form-registration .flex-input,
+.form-contact .flex-input {
   display: flex;
   flex-direction: row;
   gap: 15px;
 }
-.contact .contact-content .form-contact .item-form {
+.form-registration .item-form,
+.form-contact .item-form {
   width: 100%;
 }
-.contact .contact-content .form-contact .item-form label {
+.form-registration .item-form label,
+.form-contact .item-form label {
   display: block;
+  padding-left: 10px;
 }
-.contact .contact-content .form-contact .item-form input,
-.contact .contact-content .form-contact textarea {
+.form-registration .item-form input,
+.form-contact .item-form input,
+.form-registration textarea,
+.form-contact textarea {
   width: 100%;
   padding: 15px 10px;
   border-radius: 10px;
   font-size: 16px;
   margin: 10px 0 20px;
 }
-.contact .contact-content .form-contact textarea {
+.form-registration textarea,
+.form-contact textarea {
   resize: none;
-  height: 170px;
+  height: 200px;
 }
 @media (max-width: 991px) {
   .contact .contact-content {
     flex-direction: column;
   }
   .contact .contact-content .my-contact,
-  .contact .contact-content .form-contact {
+  .registration-content,
+  .form-contact {
     width: 100%;
   }
-  .contact .contact-content .form-contact .flex-input {
+  .form-registration .flex-input,
+  .form-contact .flex-input {
     flex-direction: column;
     gap: 0px;
   }
@@ -1366,7 +1380,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .cart-page-content .cacher .caher-box .sub-total {
   font-weight: 500;
