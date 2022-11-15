@@ -1115,8 +1115,7 @@ section {
 .questions .faq-content .active .text-item {
   height: 160px;
 }
-.questions .faq-content .faq-item h3 {
-  font-weight: 500;
+.questions .faq-content .faq-item .text-item span {
   color: var(--title-color);
   transition: 1.5s;
   font-size: 18px;
